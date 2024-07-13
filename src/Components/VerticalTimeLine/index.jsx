@@ -33,7 +33,7 @@ const VerticalTimeLine = ({ dataSets }) => {
                     {item.pl.map((plItem, idx) => (
                       <button
                         key={idx}
-                        className="rounded-full bg-gray-50 p-1 m-1"
+                        className="rounded-full bg-grayscale-500 p-1 m-1"
                       >
                         {plItem}
                       </button>
@@ -58,7 +58,7 @@ const VerticalTimeLine = ({ dataSets }) => {
               {item.id === selectedId && (
                 <AnimatePresence key={item.id + "-presence"}>
                   <motion.div
-                    className="fixed inset-0 bg-gray-50 bg-opacity-50 flex items-center justify-center"
+                    className="fixed inset-0 bg-grayscale-50 bg-opacity-50 flex items-center justify-center"
                     key={item.id + "-overlay"}
                   >
                     <Card
