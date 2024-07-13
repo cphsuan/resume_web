@@ -1,4 +1,4 @@
-import SectionTitle from "../../../../Components/SectionTitle";
+import SectionTitle from "../../../../Components/layouts/SectionTitle";
 import VerticalTimeLine from "../../../../Components/VerticalTimeLine";
 import { experiences } from "../../../../Constants/constants";
 import Reveal from "../../../../Components/Reveal";

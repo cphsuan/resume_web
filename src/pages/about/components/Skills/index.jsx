@@ -1,5 +1,5 @@
 import MarqueeCards from "../../../../Components/MarqueeCards";
-import SectionTitle from "../../../../Components/SectionTitle";
+import SectionTitle from "../../../../Components/layouts/SectionTitle";
 import SkillsCards from "../../../../Components/SkillsCards";
 
 const Skills = () => {

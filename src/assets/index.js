@@ -28,6 +28,8 @@ import memoryGame from "./projects/memory.jpg";
 
 // Avatar
 import avatar from "./avatar/avatar.png";
+import diver from "./avatar/diver.jpg";
+import hiker from "./avatar/hiker.jpg";
 
 //desktopPc
 import scene from "./desktopPc/scene.gltf";
@@ -57,4 +59,6 @@ export {
   avatar,
   vvIcon,
   scene,
+  diver,
+  hiker,
 };

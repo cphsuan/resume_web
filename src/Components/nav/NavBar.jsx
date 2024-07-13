@@ -30,8 +30,10 @@ const Navbar = () => {
             <li
               key={link.id}
               className={`${
-                currentPath === link.path ? "text-blue-400" : "text-gray-50"
-              } hover:text-blue-400 text-[18px] font-medium cursor-pointer`}
+                currentPath === link.path
+                  ? "text-primary-400"
+                  : "text-grayscale-50"
+              } hover:text-primary-400 text-[18px] font-medium cursor-pointer`}
             >
               <Link to={link.path}>{link.title}</Link>
             </li>
@@ -54,7 +56,9 @@ const Navbar = () => {
                 <li
                   key={link.id}
                   className={`${
-                    currentPath === link.path ? "text-gray-50" : "text-gray-400"
+                    currentPath === link.path
+                      ? "text-grayscale-50"
+                      : "text-grayscale-400"
                   } font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={handleLinkClick}
                 >

@@ -1,4 +1,4 @@
-import SectionTitle from "../../Components/SectionTitle";
+import SectionTitle from "../../Components/layouts/SectionTitle";
 import ProjectCards from "../../Components/ProjectCards";
 
 const Portfolio = () => {

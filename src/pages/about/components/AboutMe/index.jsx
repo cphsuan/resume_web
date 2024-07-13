@@ -1,6 +1,6 @@
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import ComponentWrapper from "../../../../Components/elements/ComponentWrapper";
-import SectionTitle from "../../../../Components/SectionTitle";
+import SectionTitle from "../../../../Components/layouts/SectionTitle";
 import ImageSlider from "../../../../Components/elements/ImageSlider";
 import { avatar } from "../../../../assets";
 

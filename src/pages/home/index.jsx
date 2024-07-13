@@ -1,5 +1,7 @@
-import SectionTitle from "../../Components/SectionTitle";
+import GeneralSection from "../../Components/layouts/GeneralSection";
+import SectionTitle from "../../Components/layouts/SectionTitle";
 import Computer from "../home/components/Computer";
+import Hobby from "../home/components/Hobby";
 
 const Home = () => {
   return (
@@ -12,7 +14,7 @@ const Home = () => {
         <div>
           <SectionTitle title="I'm Vivianne" subtitle="HELLO!" />
           <div
-            className="text-gray-50 p-6"
+            className="text-grayscale-50 p-6"
             style={{
               textTransform: "uppercase",
               fontFamily: "Poppins, sans-serif",
@@ -20,11 +22,42 @@ const Home = () => {
             }}
           >
             Expand your horizon like the ocean, for within its depths lie the
-            mysteries waiting to be discovered.
+            mysteries waiting to be discovered. 🐳
           </div>
         </div>
       </div>
-      <Computer />
+      <GeneralSection
+        title={
+          <div>
+            <span>WORK</span> | <span>ENGINEER</span> | <span>MORE</span>
+          </div>
+        }
+        desc={
+          <p>
+            I aim to take on challenging projects that push the boundaries of
+            what's possible on the web, and to be an integral part of a team
+            that values innovation, growth, and excellence.
+          </p>
+        }
+      >
+        <Computer />
+      </GeneralSection>
+      <GeneralSection
+        title={
+          <div>
+            <span>HOBBY</span> | <span>HIKER</span> | <span>DIVER</span>
+          </div>
+        }
+        desc={
+          <p>
+            I am an avid adventurer. Whether I’m hiking up or diving, these
+            experiences fuel my creativity. The thrill of exploration often
+            provide fresh perspectives that I bring back to my work.
+          </p>
+        }
+      >
+        <Hobby />
+      </GeneralSection>
     </>
   );
 };

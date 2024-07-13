@@ -1,5 +1,5 @@
 import { m, LazyMotion, domAnimation } from "framer-motion";
-import SectionTitle from "../../Components/SectionTitle";
+import SectionTitle from "../../Components/layouts/SectionTitle";
 import ContactForm from "../../Components/ContactForm";
 import SocialLinks from "../../Components/SocialLinks";
 
