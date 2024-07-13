@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "SuperMario";
-  src: url(/Fonts/Mario/SuperMario256.ttf);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +10,8 @@
 }
 
 body {
-  background: url("https://uploads-ssl.webflow.com/62e3ee10882dc50bcae8d07a/631a5d4631d4c55a475f3e34_noise-50.png");
-  background-color: #5c546b;
+  color: #f9fafb;
+  background-color: #0e1111;
   position: relative;
   overflow-x: hidden;
   -webkit-overflow-x: hidden;
@@ -115,7 +110,7 @@ polyline {
 .bounce:hover {
   display: inline-block;
   animation: rubberband 0.8s ease-out;
-  color: #cbbde5;
+  color: #bfdbfe;
 }
 
 @keyframes rubberband {
@@ -180,4 +175,23 @@ polyline {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.bg {
+  stroke: white;
+}
+
+ul {
+  list-style: "- ";
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: #cbbde5;
+  transform-origin: 0%;
 }

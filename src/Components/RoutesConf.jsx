@@ -1,4 +1,4 @@
-import { useRoutes } from "react-router-dom";
+import { useRoutes, Navigate } from "react-router-dom";
 import { navLinks } from "../Constants/navLinks";
 
 const RoutesConf = () => {
@@ -7,8 +7,9 @@ const RoutesConf = () => {
     element: <link.component />,
   }));
 
-  const routeConfig = useRoutes(routesConfig);
-  return routeConfig;
+  routesConfig.push({ path: "*", element: <Navigate to="/" replace /> });
+
+  return useRoutes(routesConfig);
 };
 
 export default RoutesConf;

@@ -37,7 +37,7 @@ const ContactForm = () => {
       <div>
         <h2
           style={{ fontFamily: "Morganite Bold, sans-serif" }}
-          className="message text-7xl bg-primary-600 p-2 rounded-xl text-grayscale-200 text-center rounded-br-[0%] relative shadow-2xl"
+          className="message text-7xl bg-primary-600 p-2 rounded-xl text-gray-200 text-center rounded-br-[0%] relative shadow-2xl"
         >
           <Typewriter words={["Let's get in touch!"]} loop={true} />
           &nbsp;
@@ -51,12 +51,12 @@ const ContactForm = () => {
           target="_blank"
           onSubmit={sendEmail}
           style={{ fontFamily: "Poppins, sans-serif" }}
-          className="w-[80%] h-full flex flex-col gap-4 pt-4 text-grayscale-200"
+          className="w-[80%] h-full flex flex-col gap-4 pt-4 text-gray-200"
         >
           <div className="w-full flex flex-col">
             <label htmlFor="firstname">First Name</label>
             <input
-              className="p-[0.5em] rounded-xl text-grayscale-950"
+              className="p-[0.5em] rounded-xl text-gray-950"
               placeholder="Enter your First Name"
               id="firstname"
               type="text"
@@ -67,7 +67,7 @@ const ContactForm = () => {
           <div className="w-full flex flex-col">
             <label htmlFor="lastname">Last Name</label>
             <input
-              className="p-[0.5em] rounded-xl text-grayscale-950"
+              className="p-[0.5em] rounded-xl text-gray-900"
               placeholder="Enter your Last Name"
               id="lastname"
               type="text"
@@ -78,7 +78,7 @@ const ContactForm = () => {
           <div className="w-full flex flex-col">
             <label htmlFor="email">E-mail</label>
             <input
-              className="p-[0.5em] rounded-xl text-grayscale-950"
+              className="p-[0.5em] rounded-xl text-gray-900"
               placeholder="Enter your E-mail"
               id="email"
               type="email"
@@ -89,7 +89,7 @@ const ContactForm = () => {
           <div className="w-full flex flex-col">
             <label>Message</label>
             <textarea
-              className="p-[0.5em] rounded-xl text-grayscale-950"
+              className="p-[0.5em] rounded-xl text-gray-900"
               placeholder="Enter your message..."
               name="message"
               required

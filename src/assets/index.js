@@ -1,5 +1,5 @@
 // Logo
-import vvIcon from "./logo/vvIcon.png";
+import vvIcon from "../../public/vvIcon.png";
 
 // Technologies
 import htmlIcon from "./tech/html.png";
@@ -29,6 +29,9 @@ import memoryGame from "./projects/memory.jpg";
 // Avatar
 import avatar from "./avatar/avatar.png";
 
+//desktopPc
+import scene from "./desktopPc/scene.gltf";
+
 export {
   menu,
   close,
@@ -53,4 +56,5 @@ export {
   memoryGame,
   avatar,
   vvIcon,
+  scene,
 };

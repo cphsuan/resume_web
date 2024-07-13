@@ -1,79 +1,66 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { styles } from "../../styles.js";
-import { navLinks } from "../../Constants/constants";
 import { vvIcon, menu, close } from "../../assets";
+import { navLinks } from "../../Constants/constants";
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const currentPath = useLocation().pathname;
+
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+    setToggle(false);
+  };
 
   return (
     <nav
-      className={`
-      ${styles.paddingX} w-full flex items-center py-5
-      fixed top-0 z-20 bg-primary relative
-    `}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary relative`}
     >
       <div className="w-full flex justify-between items-center max-w-7x1 mx-auto">
         <Link
           to="/"
           className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
+          onClick={handleLinkClick}
         >
-          <img src={vvIcon} alt={vvIcon} className="w-18 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex"></p>
+          <img src={vvIcon} alt="VV Icon" className="w-18 h-9 object-contain" />
         </Link>
-        <ul
-          className="list-none hidden sm:flex flex-row gap-10"
-          style={{ color: "#FFFFFF" }}
-        >
-          {navLinks.map((link) => {
-            return (
-              <li
-                key={link.id}
-                className={`${
-                  active === link.title ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer `}
-                onClick={() => setActive(link.title)}
-              >
-                <a href={link.id}>{link.title}</a>
-              </li>
-            );
-          })}
+        <ul className="hidden sm:flex flex-row gap-10">
+          {navLinks.map((link) => (
+            <li
+              key={link.id}
+              className={`${
+                currentPath === link.path ? "text-blue-400" : "text-gray-50"
+              } hover:text-blue-400 text-[18px] font-medium cursor-pointer`}
+            >
+              <Link to={link.path}>{link.title}</Link>
+            </li>
+          ))}
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
-            className="w-[28ox] h-[28px] pbject-contain cursor-pointer z-20 "
+            className="w-[28px] h-[28px] object-contain cursor-pointer z-20"
             onClick={() => setToggle(!toggle)}
             src={toggle ? close : menu}
-            alt={menu}
+            alt="Menu Icon"
           />
           <div
             className={`${
-              !toggle ? "hidden" : "flex"
-            } pt-20 p-6 black-gradient absolute top-2 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+              toggle ? "flex" : "hidden"
+            } pt-20 p-6 bg-blue-400 absolute top-2 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-col gap-4">
-              {navLinks.map((link) => {
-                return (
-                  <li
-                    key={link.id}
-                    className={`${
-                      active === link.title ? "text-white" : "text-secondary"
-                    } font-poppins font-medium cursor-pointer text-[16px]`}
-                    onClick={() => {
-                      setActive(link.title);
-                      setToggle(!toggle);
-                    }}
-                  >
-                    <a href={`#${link.id}`}>{link.title}</a>
-                  </li>
-                );
-              })}
+              {navLinks.map((link) => (
+                <li
+                  key={link.id}
+                  className={`${
+                    currentPath === link.path ? "text-gray-50" : "text-gray-400"
+                  } font-poppins font-medium cursor-pointer text-[16px]`}
+                  onClick={handleLinkClick}
+                >
+                  <Link to={link.path}>{link.title}</Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

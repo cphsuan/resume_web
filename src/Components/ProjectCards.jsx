@@ -129,7 +129,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="text-grayscale-50 p-5 rounded-lg sm:w-[280px] w-full"
+        className="text-gray-50 p-5 rounded-lg sm:w-[280px] w-full"
         style={{ marginTop: "-120%" }}
       >
         <div className="relative w-full h-[180px]">
