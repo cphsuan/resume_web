@@ -1,34 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
-const BeforeAfter = ({ beforeImg, afterImg }) => {
+const BeforeAfter = React.memo(({ beforeImg, afterImg }) => {
   const [sliderPosition, setSliderPosition] = useState(25);
-  const [isDragging, setIsDragging] = useState(false);
 
-  const handleMove = (event) => {
-    if (!isDragging) return;
-
-    const rect = event.currentTarget.getBoundingClientRect();
+  const calculatePosition = (event, rect) => {
     const x = Math.max(0, Math.min(event.clientX - rect.left, rect.width));
-    const percent = Math.max(0, Math.min((x / rect.width) * 100, 100));
+    return Math.max(0, Math.min((x / rect.width) * 100, 100));
+  };
+
+  const handleMove = useCallback((event) => {
+    const slider = event.currentTarget;
+    const rect = slider.getBoundingClientRect();
+    const percent = calculatePosition(event, rect);
 
     setSliderPosition(percent);
-  };
-
-  const handleMouseDown = () => {
-    setIsDragging(true);
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
+  }, []);
 
   return (
     <div className="flex justify-center p-6">
-      <div className="w-full relative" onMouseUp={handleMouseUp}>
+      <div className="w-full relative">
         <div
-          className="relative w-full max-w-[700px] aspect-[70/45] m-auto overflow-hidden rounded-2xl"
+          className="relative w-full max-w-[700px] aspect-[70/45] m-auto overflow-hidden rounded-2xl slider-container"
           onMouseMove={handleMove}
-          onMouseDown={handleMouseDown}
         >
           <img src={beforeImg} alt="Before Image" />
           <div
@@ -49,6 +42,6 @@ const BeforeAfter = ({ beforeImg, afterImg }) => {
       </div>
     </div>
   );
-};
+});
 
 export default BeforeAfter;

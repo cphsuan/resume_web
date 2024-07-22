@@ -1,6 +1,5 @@
 import Home from "../pages/home";
 import About from "../pages/about";
-import Contact from "../pages/contact";
 import Portfolio from "../pages/portfolio";
 
 export const navLinks = [
@@ -21,11 +20,5 @@ export const navLinks = [
     title: "Portfolio",
     path: "/portfolio",
     component: Portfolio,
-  },
-  {
-    id: "contact",
-    title: "Contact",
-    path: "/contact",
-    component: Contact,
   },
 ];
