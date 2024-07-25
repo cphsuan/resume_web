@@ -5,13 +5,8 @@ import {
   faWindowRestore,
   faBagShopping,
   faDiceD6,
-  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  faReact,
-  faGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faReact } from "@fortawesome/free-brands-svg-icons";
 
 import {
   htmlIcon,
@@ -66,9 +61,6 @@ const icons = {
   faBagShopping,
   faDiceD6,
   faReact,
-  faGithub,
-  faLinkedin,
-  faEnvelope,
 };
 
 const projects = [

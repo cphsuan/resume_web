@@ -1,5 +1,7 @@
 // Logo
 import vvIcon from "../../public/vvIcon.png";
+import bloggerIcon from "./logo/blogger.webp";
+import mediumIcon from "./logo/medium.png";
 
 // Technologies
 import htmlIcon from "./tech/html.png";
@@ -61,4 +63,6 @@ export {
   scene,
   diver,
   hiker,
+  bloggerIcon,
+  mediumIcon,
 };

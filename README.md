@@ -18,6 +18,9 @@ $ npm i
 
 # Run the app
 $ npm run dev
+
+#commit
+$ npm run commit
 ```
 
 ## Packages

@@ -1,7 +1,7 @@
 import { Typewriter } from "react-simple-typewriter";
 import GeneralSection from "../../Components/layouts/GeneralSection";
 import SectionTitle from "../../Components/layouts/SectionTitle";
-import SocialLinks from "../../Components/SocialLinks";
+import SocialLinks from "./components/SocialLinks";
 import Computer from "../home/components/Computer";
 import Hobby from "../home/components/Hobby";
 import Habit from "../home/components/Habit";
