@@ -9,7 +9,7 @@ const Habit = () => {
   };
 
   return (
-    <div className="flex w-full p-6">
+    <div className="flex w-full max-w-[700px] pt-6">
       {[
         {
           site: "blogger",
@@ -28,7 +28,7 @@ const Habit = () => {
           key={index}
           className={`flex-1 transition-all duration-300 ${
             expandedButton === index ? "flex-[7]" : "flex-1"
-          } bg-primary-600 text-primary-100 p-4 m-1 rounded`}
+          } bg-primary-600 text-primary-100 p-4 m-1 rounded-xl`}
           onClick={() => handleButtonClick(index)}
         >
           <img className="p-2" src={habit.logo} alt={habit.site} />

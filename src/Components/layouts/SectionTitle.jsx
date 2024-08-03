@@ -1,5 +1,5 @@
 import { m, LazyMotion, domAnimation } from "framer-motion";
-import ComponentWrapper from "../elements/ComponentWrapper";
+import ComponentWrapper from "../ComponentWrapper";
 
 const SectionTitle = (props) => {
   const { title, subtitle } = props;
@@ -11,7 +11,7 @@ const SectionTitle = (props) => {
           initial={{ x: -350 }}
           whileInView={{ x: 0 }}
           transition={{ duration: 0.6, type: "spring" }}
-          className="text-primary-100 p-6 noselect"
+          className="text-primary-100"
         >
           {subtitle && (
             <span

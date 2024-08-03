@@ -1,9 +1,8 @@
 import React from "react";
-import ComponentWrapper from "../../Components/elements/ComponentWrapper";
-
-const AboutMe = React.lazy(() => import("./components/AboutMe"));
-const Experiences = React.lazy(() => import("./components/Experiences"));
-const Skills = React.lazy(() => import("./components/Skills"));
+import ComponentWrapper from "../../components/ComponentWrapper";
+import AboutMe from "./components/AboutMe";
+import Experiences from "./components/Experiences";
+import Skills from "./components/Skills";
 
 function About() {
   return (

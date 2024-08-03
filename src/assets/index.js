@@ -1,9 +1,15 @@
 // Logo
 import vvIcon from "../../public/vvIcon.png";
-import bloggerIcon from "./logo/blogger.webp";
-import mediumIcon from "./logo/medium.png";
+import bloggerIcon from "./images/logo/blogger.webp";
+import mediumIcon from "./images/logo/medium.png";
 
-// Technologies
+// Avatar
+import avatar from "./images/avatar/avatar.png";
+import diver from "./images/avatar/diver.jpg";
+import hiker from "./images/avatar/hiker.jpg";
+import hiker2 from "./images/avatar/hiker2.jpg";
+
+// Technologiesx
 import htmlIcon from "./tech/html.png";
 import cssIcon from "./tech/css.png";
 import jsIcon from "./tech/javascript.png";
@@ -12,33 +18,14 @@ import awsIcon from "./tech/aws.png";
 import javaIcon from "./tech/java.png";
 import gitIcon from "./tech/git.png";
 import githubIcon from "./tech/github.png";
-import figmaIcon from "./tech/figma.png";
-import psqlIcon from "./tech/postgresql.png";
 import eslintIcon from "./tech/eslint.png";
 import viteIcon from "./tech/vite.svg";
-import pyIcon from "./tech/py.png";
 import nodeIcon from "./tech/node.webp";
-import neoIcon from "./tech/neo.png";
-import raspIcon from "./tech/raspi.png";
-import close from "./close.svg";
-import menu from "./menu.svg";
-
-// Projects
-import pawsitivePrototype from "./projects/pawsitive.jpeg";
-import calculator from "./projects/calculator.jpg";
-import memoryGame from "./projects/memory.jpg";
-
-// Avatar
-import avatar from "./avatar/avatar.png";
-import diver from "./avatar/diver.jpg";
-import hiker from "./avatar/hiker.jpg";
 
 //desktopPc
-import scene from "./desktopPc/scene.gltf";
+import scene from "./gltfs/desktopPc/scene.gltf";
 
 export {
-  menu,
-  close,
   htmlIcon,
   cssIcon,
   jsIcon,
@@ -48,21 +35,14 @@ export {
   gitIcon,
   githubIcon,
   eslintIcon,
-  figmaIcon,
-  psqlIcon,
   nodeIcon,
-  pyIcon,
   viteIcon,
-  neoIcon,
-  raspIcon,
-  pawsitivePrototype,
-  calculator,
-  memoryGame,
-  avatar,
   vvIcon,
-  scene,
-  diver,
-  hiker,
   bloggerIcon,
   mediumIcon,
+  avatar,
+  diver,
+  hiker,
+  hiker2,
+  scene,
 };

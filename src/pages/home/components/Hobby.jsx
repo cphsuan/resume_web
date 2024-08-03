@@ -1,5 +1,5 @@
 import { hiker, diver } from "../../../assets";
-import BeforeAfter from "../../../Components/BeforeAfter";
+import BeforeAfter from "../../../components/BeforeAfter";
 
 const Hobby = () => {
   return (

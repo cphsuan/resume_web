@@ -10,7 +10,7 @@ const ScrollToTop = () => {
 
   return (
     <button
-      className="fixed bottom-4 right-4 bg-primary-400 text-black rounded-full p-4 shadow-md cursor-pointer outline-none z-1"
+      className="fixed bottom-4 right-4 bg-primary-400 text-black rounded-full p-4 shadow-md cursor-pointer outline-none z-20"
       onClick={handleScrollToTop}
     >
       Top

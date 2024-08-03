@@ -1,44 +1,36 @@
 import { Typewriter } from "react-simple-typewriter";
-import GeneralSection from "../../Components/layouts/GeneralSection";
-import SectionTitle from "../../Components/layouts/SectionTitle";
+import GeneralSection from "../../components/layouts/GeneralSection";
+import SectionTitle from "../../components/layouts/SectionTitle";
 import SocialLinks from "./components/SocialLinks";
-import Computer from "../home/components/Computer";
-import Hobby from "../home/components/Hobby";
-import Habit from "../home/components/Habit";
+import Computer from "./components/Computer";
+import Hobby from "./components/Hobby";
+import Habit from "./components/Habit";
+import { hiker2 } from "../../assets";
+import ComponentWrapper from "../../components/ComponentWrapper";
 
 const Home = () => {
   return (
-    <>
-      <div className="inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 sm:px-16 p-6">
-        <div className="flex flex-col justify-center items-center">
-          <div className="w-5 h-5 rounded-full bg-grayscale-50" />
-          <div className="w-1 h-80 lg:h-72 bg-gradient-to-b from-grayscale-50 to-grayscale-900" />
-        </div>
-        <div>
+    <ComponentWrapper>
+      <div className="flex flex-col items-center md:flex-row md:items-start pt-6">
+        <div className="px-6">
           <SectionTitle title="I'm Vivianne" subtitle="HELLO!" />
-          <div
-            className="text-grayscale-50 px-6"
-            style={{
-              textTransform: "uppercase",
-              fontFamily: "Poppins, sans-serif",
-              fontWeight: "600",
-            }}
-          >
+          <div className="text-grayscale-50 font-bold uppercase">
             I'm an Frontend Engineer with over 1+ year of experience. Feel free
             to explore my portfolio. If you have any questions, don't hesitate
             to reach out!
           </div>
-          <div className="text-grayscale-500 p-6">
+          <div className="text-grayscale-500 py-6 sm:pt-6">
             <Typewriter
               words={[
                 "Expand your horizon like the ocean, for within its depths lie the mysteries waiting to be discovered. 🐳",
               ]}
-              loop={true}
+              typeSpeed={80}
             />
           </div>
         </div>
+        <img src={hiker2} className="max-w-[250px] rounded-xl" alt="Vv hiker" />
       </div>
-      <div className="py-6">
+      <div className="pt-6">
         <SocialLinks />
       </div>
       <GeneralSection
@@ -88,7 +80,7 @@ const Home = () => {
       >
         <Habit />
       </GeneralSection>
-    </>
+    </ComponentWrapper>
   );
 };
 

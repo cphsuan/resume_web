@@ -1,5 +1,5 @@
 import { m, LazyMotion, domAnimation } from "framer-motion";
-import { skills } from "../Constants/constants";
+import { skills } from "../constants";
 
 const SkillsCards = () => {
   return (

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const Card = ({
-  classId = "card w-[300px] h-[250px]",
+  classId = "card w-full md:w-2/5 pb-2",
   id = 0,
   header,
   body,
@@ -10,7 +10,7 @@ const Card = ({
 }) => {
   return (
     <motion.div
-      className={`${classId} flex flex-col items-right bg-gray-50 rounded-xl border-primary-800 cursor-pointer`}
+      className={`${classId} flex flex-col items-right rounded-xl border-primary-800 cursor-pointer`}
       layoutId={`card-container-${id}`}
       onClick={onClick}
       {...props}
