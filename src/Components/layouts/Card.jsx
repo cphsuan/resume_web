@@ -15,10 +15,8 @@ const Card = ({
       onClick={onClick}
       {...props}
     >
-      <div className="card-content-header rounded-t-xl p-3 bg-primary-800">
-        {header}
-      </div>
-      <div className="card-content-body rounded-b-xl p-3 overflow-auto bg-grayscale-500">
+      <div className="rounded-t-xl p-3 bg-primary-800">{header}</div>
+      <div className="rounded-b-xl p-3 overflow-auto bg-grayscale-500">
         {body}
       </div>
     </motion.div>

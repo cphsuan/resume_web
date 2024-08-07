@@ -11,7 +11,7 @@ import ComponentWrapper from "../../components/ComponentWrapper";
 const Home = () => {
   return (
     <ComponentWrapper>
-      <div className="flex flex-col items-center md:flex-row md:items-start pt-6">
+      <div className="flex flex-col items-center md:flex-row md:items-start md:justify-between pt-6">
         <div className="px-6">
           <SectionTitle title="I'm Vivianne" subtitle="HELLO!" />
           <div className="text-grayscale-50 font-bold uppercase">

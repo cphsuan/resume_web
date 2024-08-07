@@ -30,7 +30,7 @@ const Computer = () => {
 
 const ComputerCanvas = () => {
   return (
-    <div style={{ height: "50vh" }}>
+    <div style={{ height: "30vh", width: "70vw" }}>
       <Canvas
         frameloop="demand"
         shadows

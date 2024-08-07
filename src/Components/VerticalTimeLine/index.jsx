@@ -12,7 +12,7 @@ export default function VerticalTimeLine({ dataSets }) {
       </motion.div>
       {dataSets.map((item, idx) => (
         <div
-          className={`flex justify-center ${
+          className={`flex justify-center relative ${
             idx % 2 === 1 ? "md:justify-start" : "md:justify-end"
           }`}
           key={item.id}
@@ -60,12 +60,12 @@ export default function VerticalTimeLine({ dataSets }) {
             {item.id === selectedId && (
               <AnimatePresence key={item.id + "-presence"}>
                 <motion.div
-                  className="fixed inset-0 bg-grayscale-50 bg-opacity-50 flex items-center justify-center"
+                  className="fixed inset-0 bg-grayscale-50 bg-opacity-50 flex items-center justify-center z-50"
                   key={item.id + "-overlay"}
                 >
                   <Card
                     key={item.id}
-                    classId="card w-4/5 h-4/5"
+                    classId="card w-4/5 h-max-4/5"
                     id={item.id}
                     onClick={() => setSelectedId("")}
                     header={
