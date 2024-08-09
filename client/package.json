@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "start": "PORT=5173 serve -s dist"
   },
   "config": {
     "commitizen": {
@@ -51,12 +52,12 @@
     "react-simple-typewriter": "^5.0.1",
     "react-three-fiber": "^6.0.13",
     "react-tilt": "^1.0.2",
-    "react-tsparticles": "^2.9.3",
     "react-use": "^17.4.0",
     "sort-by": "^0.0.2",
     "tailwindcss": "^3.3.1",
     "three": "^0.163.0",
     "tsparticles": "^2.9.3",
+    "update-browserslist-db": "^1.1.0",
     "vite": "^4.2.0"
   },
   "devDependencies": {

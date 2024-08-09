@@ -19,6 +19,9 @@ $ npm i
 # Run the app
 $ npm run dev
 
+# Run on docker
+$ docker-compose up --build
+
 #commit
 $ npm run commit
 ```

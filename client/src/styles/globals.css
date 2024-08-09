@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Morganite";
+  font-weight: "400";
+  src: url(/Fonts/Morganite/Morganite-Black.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;

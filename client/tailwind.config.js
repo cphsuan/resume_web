@@ -9,6 +9,9 @@ export default {
       dropShadow: {
         green: "0 0 10rem #29c26f",
       },
+      fontFamily: {
+        morganite: ["Morganite"],
+      },
     },
     colors: {
       primary: {

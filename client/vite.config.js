@@ -9,5 +9,9 @@ export default defineConfig({
   assetsInclude: ["**/*.gltf"],
   server: {
     host: true,
+    port: 5173,
+  },
+  build: {
+    outDir: "public",
   },
 });

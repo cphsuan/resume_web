@@ -1,5 +1,5 @@
 // Logo
-import vvIcon from "../../public/vvIcon.png";
+import vvIcon from "/vvIcon.png";
 import bloggerIcon from "./images/logo/blogger.webp";
 import mediumIcon from "./images/logo/medium.png";
 
@@ -23,7 +23,7 @@ import viteIcon from "./tech/vite.svg";
 import nodeIcon from "./tech/node.webp";
 
 //desktopPc
-import scene from "./gltfs/desktopPc/scene.gltf";
+import scene from "/models/gltfs/desktopPc/scene.gltf";
 
 export {
   htmlIcon,
