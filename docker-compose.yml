@@ -1,8 +1,8 @@
 version: "3"
-name: "resume_web"
+name: "resume"
 
 services:
-  app:
+  web:
     build:
       context: .
     ports:

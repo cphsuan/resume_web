@@ -1,4 +1,4 @@
-FROM node:20.8 as resume-web
+FROM node:20.8 as resume
 
 WORKDIR /usr/client
 COPY ./client .
@@ -16,6 +16,6 @@ RUN mkdir html
 WORKDIR /
 
 COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=resume-web ./usr/client/dist /usr/share/nginx/html
+COPY --from=resume ./usr/client/dist /usr/share/nginx/html
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
