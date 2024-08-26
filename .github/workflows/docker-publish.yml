@@ -22,22 +22,22 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - id: lower-repo
-        name: Repository to lowercase
+      - id: lower-repo
+          name: Repository to lowercase
+          run: |
+            echo "repository=${GITHUB_REPOSITORY@L}" >> $GITHUB_OUTPUT
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/${{ steps.lower-repo.outputs.repository }}:latest
+
+      - name: Trigger deploy hook
         run: |
-          echo "repository=${GITHUB_REPOSITORY@L}" >> $GITHUB_OUTPUT
+          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
 
-    - name: Build and push Docker image
-      uses: docker/build-push-action@v6
-      with:
-        context: .
-        push: true
-        tags: ghcr.io/${{ steps.lower-repo.outputs.repository }}:latest
-
-    - name: Trigger deploy hook
-      run: |
-        curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
-
-    - name: Log out from Docker Hub
-      run: docker logout
+      - name: Log out from Docker Hub
+        run: docker logout
 
